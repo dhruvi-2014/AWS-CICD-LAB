@@ -1,0 +1,10 @@
+const express=require('express');
+const helmet=require('helmet');
+const morgan=require('morgan');
+const app=express();
+const port=Number(process.env.PORT||8081);
+app.use(helmet());app.use(morgan('combined'));app.use(express.json());
+app.get('/health',(req,res)=>res.json({status:'ok',service:'customer-microservice',version:process.env.APP_VERSION||'1.0.0'}));
+app.get('/api/customers',(req,res)=>res.json([{id:1,name:'Demo Customer',email:'customer@example.com'}]));
+if(require.main===module) app.listen(port,'0.0.0.0',()=>console.log(`Customer microservice listening on port ${port}`));
+module.exports=app;

@@ -1,0 +1,1 @@
+{"name":"customer-microservice","version":"1.0.0","description":"Reference customer microservice used for the update-customer-microservice deployment scenario.","main":"src/server.js","scripts":{"start":"node src/server.js","test":"node --test server.test.js"},"engines":{"node":">=20"},"dependencies":{"express":"^4.21.2","helmet":"^8.0.0","morgan":"^1.10.0"}}

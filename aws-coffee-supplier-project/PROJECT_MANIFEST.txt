@@ -1,0 +1,14 @@
+AWS Coffee Supplier Management Project
+
+This archive contains a complete reference implementation and deployment assets for a portfolio/GitHub repository based on the AWS Skill Builder activity scenario.
+
+Source basis:
+- The uploaded activity document shows an AWS EC2 environment.
+- It shows Coffee Supplier customer/admin interfaces and supplier database operations.
+- It shows an update-customer-microservice pipeline with Source and Deploy stages.
+- It shows a successful replacement deployment with 100% traffic on the replacement version.
+
+Important:
+- This is reconstructed source code, not the private/original AWS Skill Builder lab source.
+- Do not publish temporary AWS lab federation URLs, tokens, passwords, or credentials.
+- Replace all placeholders in the AWS deployment instructions with your own AWS account resources.

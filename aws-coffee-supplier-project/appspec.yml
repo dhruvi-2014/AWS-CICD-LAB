@@ -1,0 +1,30 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/coffee-supplier
+    overwrite: true
+permissions:
+  - object: /opt/coffee-supplier
+    owner: appuser
+    group: appuser
+    mode: 755
+    type:
+      - directory
+hooks:
+  ApplicationStop:
+    - location: deploy/scripts/stop.sh
+      timeout: 60
+      runas: root
+  AfterInstall:
+    - location: deploy/scripts/install.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deploy/scripts/start.sh
+      timeout: 60
+      runas: root
+  ValidateService:
+    - location: deploy/scripts/validate.sh
+      timeout: 60
+      runas: root

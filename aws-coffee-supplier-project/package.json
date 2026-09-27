@@ -1,0 +1,24 @@
+{
+  "name": "coffee-supplier-management",
+  "version": "1.0.0",
+  "description": "Reference implementation of an AWS-hosted Coffee Supplier Management application with an updated customer microservice and deployment assets.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "seed": "node src/db/seed.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {}
+}

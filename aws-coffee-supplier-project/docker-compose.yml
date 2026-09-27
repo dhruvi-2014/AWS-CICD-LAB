@@ -1,0 +1,19 @@
+services:
+  customer-service:
+    build: ./services/customer-service
+    ports:
+      - "8081:8081"
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      DB_FILE: /app/data/coffee.db
+      CUSTOMER_SERVICE_URL: http://customer-service:8081
+    volumes:
+      - coffee-data:/app/data
+    depends_on:
+      - customer-service
+volumes:
+  coffee-data:
